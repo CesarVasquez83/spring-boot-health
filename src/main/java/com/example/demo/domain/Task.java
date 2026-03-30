@@ -26,6 +26,10 @@ public class Task {
 
   @Column(nullable = false)
   private Instant updatedAt;
+  
+  @ManyToOne(fetch = FetchType.LAZY)
+  @JoinColumn(name = "user_id", nullable = false)
+  private User user;
 
   @PrePersist
   void prePersist() {
@@ -49,4 +53,7 @@ public class Task {
   public void setStatus(TaskStatus status) { this.status = status; }
   public Instant getCreatedAt() { return createdAt; }
   public Instant getUpdatedAt() { return updatedAt; }
+  // getter y setter
+  public User getUser() { return user; }
+  public void setUser(User user) { this.user = user; }
 }

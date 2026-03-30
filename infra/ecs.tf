@@ -115,6 +115,14 @@ resource "aws_ecs_task_definition" "backend" {
         {
           name  = "SPRING_DATASOURCE_PASSWORD"
           value = var.db_password
+        },
+        {
+          name  = "JWT_SECRET"
+          value = var.jwt_secret
+        },
+        {
+          name  = "JWT_EXPIRATION"
+          value = "86400000"
         }
       ]
 

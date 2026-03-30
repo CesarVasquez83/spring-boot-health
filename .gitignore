@@ -37,3 +37,6 @@ infra/.terraform/
 infra/terraform.tfstate
 infra/terraform.tfstate.backup
 infra/*.tfvarsBOOT-INF/
+
+###application.properties###
+**/src/main/resources/application.properties/

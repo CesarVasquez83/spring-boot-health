@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;   // incluye CrossOrigin
 
 import java.util.List;
 
-@CrossOrigin(origins = "*")              // ← HABILITA CORS PARA TODO EL CONTROLADOR
+
 @RestController
 @RequestMapping("/api/tasks")
 public class TaskController {

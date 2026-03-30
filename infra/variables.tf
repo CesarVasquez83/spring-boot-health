@@ -30,3 +30,8 @@ variable "ecr_frontend_url" {
   description = "URL completa del repositorio ECR para frontend"
   type        = string
 }
+
+variable "jwt_secret" {
+  description = "JWT secret key"
+  sensitive   = true  
+}
